@@ -106,11 +106,12 @@ p {
                     default:
                         opcionAleatoria = 'No se encontró ninguna situación para el nombre ingresado.';
                         break;
-                }
-            }
+                  }
+        document.getElementById('resultado').style.animation = 'blink 1s infinite alternate'; // Aplicar animación de destello
+    }
 
-            document.getElementById('resultado').innerHTML = opcionAleatoria;
-        }
+    document.getElementById('resultado').innerHTML = opcionAleatoria;
+}
     </script>
 </head>
 <body>
