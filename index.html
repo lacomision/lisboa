@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Control de Pasajeros</title>
+    <title>Nos Vamos a Lisboa</title>
     <style>
         <style>
         body {
@@ -75,22 +75,22 @@
                         opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Alma Rodriguez (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nLa Interpol dio una orden de captura por no invitarle una cena al negro.';
                         break;
                     case 'Lucia Samprieto':
-                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Lucia Samprieto (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nEl FBI la busca para ofrecerle una posición como asesora en ciberseguridad.';
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Lucia Samprieto (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nEl FBI la busca por robarle los derechos de su canción a Marcos, un chico de parroquia.';
                         break;
                     case 'Valentina Aizcorbe':
-                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Valentina Aizcorbe (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nLa Interpol la busca para reclutarla como agente encubierto en una operación internacional.';
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Valentina Aizcorbe (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nCatalina Belmonte la busca para reconciliarse.';
                         break;
                     case 'Maximiliano Peña':
-                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Maximiliano Peña (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nEl FBI lo busca para ofrecerle una beca de estudios en perfilación criminal.';
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Maximiliano Peña (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nLa seguridad del aeropuerto solicita revisar el interior de su riñonera.';
                         break;
                     case 'Maximiliano Sanchez':
-                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Maximiliano Sanchez (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nLa Interpol lo busca para otorgarle un reconocimiento por su labor humanitaria.';
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Maximiliano Sanchez (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nLa Interpol lo busca por mantener relaciones en los asientos del transporte publico.';
                         break;
                     case 'Franco Morencio':
-                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Franco Morencio (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nEl FBI lo busca para ofrecerle una oportunidad de entrenamiento en operaciones especiales.';
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Franco Morencio (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nLa seguridad española lo busca por reivindicar la dictadura de Franco.';
                         break;
                     case 'Matias Rodriguez':
-                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Matias Rodriguez (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nLa Interpol lo busca para premiarlo por sus avances en inteligencia artificial y ciberseguridad.';
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Matias Rodriguez (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nCharlie se opone que aborde su vuelo.';
                         break;
                     default:
                         opcionAleatoria = 'No se encontró ninguna situación para el nombre ingresado.';
@@ -104,12 +104,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Control de Pasajeros</h1>
+        <h1>¿Llegarán a Lisboa?</h1>
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" placeholder="Ingrese su nombre">
         <label for="pasaporte">Número de Pasaporte:</label>
         <input type="text" id="pasaporte" placeholder="Ingrese su número de pasaporte">
-        <button onclick="generarOpcion()">Generar</button>
+        <button onclick="generarOpcion()">Verificar</button>
         <p id="resultado"></p>
     </div>
 </body>
