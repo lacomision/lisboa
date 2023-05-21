@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Control de Pasajeros</title>
+    <style>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        p {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    </style>
+    <script>
+        function generarOpcion() {
+            var nombre = document.getElementById('nombre').value;
+            var pasaporte = document.getElementById('pasaporte').value;
+
+            var opcionAleatoria;
+            var permitirPaso = Math.random() < 0.5; // 50% de probabilidad de permitir el paso
+
+            if (permitirPaso) {
+                opcionAleatoria = 'Bienvenido(a) al aeropuerto. Aborde su vuelo, ' + nombre + '.';
+            } else {
+                switch (nombre) {
+                    case 'Alma Rodriguez':
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Alma Rodriguez (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nLa Interpol dio una orden de captura por no invitarle una cena al negro.';
+                        break;
+                    case 'Lucia Samprieto':
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Lucia Samprieto (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nEl FBI la busca para ofrecerle una posición como asesora en ciberseguridad.';
+                        break;
+                    case 'Valentina Aizcorbe':
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Valentina Aizcorbe (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nLa Interpol la busca para reclutarla como agente encubierto en una operación internacional.';
+                        break;
+                    case 'Maximiliano Peña':
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Maximiliano Peña (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nEl FBI lo busca para ofrecerle una beca de estudios en perfilación criminal.';
+                        break;
+                    case 'Maximiliano Sanchez':
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Maximiliano Sanchez (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nLa Interpol lo busca para otorgarle un reconocimiento por su labor humanitaria.';
+                        break;
+                    case 'Franco Morencio':
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Franco Morencio (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nEl FBI lo busca para ofrecerle una oportunidad de entrenamiento en operaciones especiales.';
+                        break;
+                    case 'Matias Rodriguez':
+                        opcionAleatoria = 'ATENCIÓN: Se solicita la presencia de Matias Rodriguez (Pasaporte: ' + pasaporte + ') en la sala de seguridad. \nLa Interpol lo busca para premiarlo por sus avances en inteligencia artificial y ciberseguridad.';
+                        break;
+                    default:
+                        opcionAleatoria = 'No se encontró ninguna situación para el nombre ingresado.';
+                        break;
+                }
+            }
+
+            document.getElementById('resultado').innerHTML = opcionAleatoria;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Control de Pasajeros</h1>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Ingrese su nombre">
+        <label for="pasaporte">Número de Pasaporte:</label>
+        <input type="text" id="pasaporte" placeholder="Ingrese su número de pasaporte">
+        <button onclick="generarOpcion()">Generar</button>
+        <p id="resultado"></p>
+    </div>
+</body>
+</html>
