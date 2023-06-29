@@ -1,85 +1,139 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Check-in Vuelo Montevideo-Madrid</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #FFC300; /* Color típico de Uruguay */
-        }
+  <title>Admisión de Aeropuerto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+    }
 
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+    h1 {
+      color: #333333;
+    }
 
-        h1 {
-            text-align: center;
-            color: #E60026; /* Color típico de España */
-        }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555555;
+      font-weight: bold;
+    }
 
-        label {
-            display: block;
-            margin-top: 10px;
-            color: #555;
-        }
+    input[type="text"] {
+      padding: 5px;
+      border: 1px solid #dddddd;
+      border-radius: 4px;
+      width: 200px;
+    }
 
-        input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            border-radius: 3px;
-            border: 1px solid #ccc;
-        }
+    button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #E60026; /* Color típico de España */
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
+    button:hover {
+      background-color: #45a049;
+    }
 
-        button:hover {
-            background-color: #FF3A59; /* Color de resaltado */
-        }
+    #mensaje {
+      margin-top: 20px;
+      font-weight: bold;
+    }
 
-        p {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-radius: 3px;
-            border: 1px solid #ccc;
-            animation: blink 1s infinite alternate;
-        }
-    </style>
-    <script>
-        function generarOpcion() {
-            var nombre = document.getElementById('nombre').value;
-            var pasaporte = document.getElementById('pasaporte').value;
+    .vuelos {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-            var opcionAleatoria = '¡Bienvenido(a) al aeropuerto! Aborde su vuelo de Montevideo a Madrid, ' + nombre + '. ¡Que tengas un excelente viaje!';
-            
-            document.getElementById('resultado').style.animation = 'blink 1s infinite alternate'; // Aplicar animación de destello
-            document.getElementById('resultado').innerHTML = opcionAleatoria;
-        }
-    </script>
+    .vuelo-checkbox {
+      margin: 10px;
+    }
+
+    .vuelo-label {
+      margin-left: 5px;
+    }
+
+    .imagen-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .imagen-container img {
+      max-width: 100%;
+      max-height: 300px;
+    }
+
+    .resaltado {
+      color: red;
+    }
+  </style>
+  <script>
+    function mostrarMensaje() {
+      var nombre = document.getElementById("nombre").value;
+      var pasaporte = document.getElementById("pasaporte").value;
+      var vuelo2 = document.getElementById("vuelo2").checked;
+      var vuelo3 = document.getElementById("vuelo3").checked;
+      var vuelo4 = document.getElementById("vuelo4").checked;
+
+      if (vuelo2 && nombre.toLowerCase() === "lucia sampietro") {
+        var mensaje = "Lucia Sampietro, por favor presentarse en el centro de control de narcóticos.";
+        document.getElementById("mensaje").innerHTML = '<div class="imagen-container"><img src="maxiterrorista.jpg" alt="Maxiterrorista"></div><div class="resaltado">' + mensaje + '</div>';
+      } else if (vuelo3 && nombre.toLowerCase() === "franco morencio") {
+        var mensaje = "Franco Morencio, es buscado por incitar el racismo. Aguarde para ser abordado por las autoridades.";
+        document.getElementById("mensaje").innerText = mensaje;
+      } else if (vuelo4 && nombre.toLowerCase() === "maximiliano sanchez") {
+        var mensaje = "Alerta terrorista.";
+        document.getElementById("mensaje").innerHTML = '<div class="imagen-container"><img src="maxiterrorista.jpg" alt="Maxiterrorista"></div><div class="resaltado">' + mensaje + '</div>';
+      } else {
+        var mensaje = "Bienvenido " + nombre + "! Aborde su vuelo.";
+        document.getElementById("mensaje").innerText = mensaje;
+      }
+    }
+  </script>
 </head>
 <body>
-    <div class="container">
-        <h1>Check-in Vuelo Montevideo-Madrid</h1>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" placeholder="Ingrese su nombre">
-        <label for="pasaporte">Número de Pasaporte:</label>
-        <input type="text" id="pasaporte" placeholder="Ingrese su número de pasaporte">
-        <button onclick="generarOpcion()">Realizar Check-in</button>
-        <p id="resultado"></p>
+  <h1>Admisión de Aeropuerto</h1>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" required>
+  <br>
+  <label for="pasaporte">Número de pasaporte:</label>
+  <input type="text" id="pasaporte" required>
+  <br>
+  <div class="vuelos">
+    <div>
+      <input type="checkbox" id="vuelo1" class="vuelo-checkbox">
+      <label for="vuelo1" class="vuelo-label">Montevideo - Madrid</label>
     </div>
+    <div>
+      <input type="checkbox" id="vuelo2" class="vuelo-checkbox">
+      <label for="vuelo2" class="vuelo-label">Madrid - Lisboa</label>
+    </div>
+    <div>
+      <input type="checkbox" id="vuelo3" class="vuelo-checkbox">
+      <label for="vuelo3" class="vuelo-label">Lisboa - París</label>
+    </div>
+    <div>
+      <input type="checkbox" id="vuelo4" class="vuelo-checkbox">
+      <label for="vuelo4" class="vuelo-label">París - Barcelona</label>
+    </div>
+    <div>
+      <input type="checkbox" id="vuelo5" class="vuelo-checkbox">
+      <label for="vuelo5" class="vuelo-label">Barcelona - Roma</label>
+    </div>
+  </div>
+  <br>
+  <button onclick="mostrarMensaje()">Enviar</button>
+  <br>
+  <div id="mensaje"></div>
 </body>
 </html>
 
