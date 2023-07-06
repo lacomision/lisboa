@@ -86,15 +86,15 @@
 
       if (vuelo2 && nombre.toLowerCase() === "lucia sampietro") {
         var mensaje = "Lucia Sampietro, por favor presentarse en el centro de control de narcóticos.";
-        document.getElementById("mensaje").innerHTML = '<div class="imagen-container"><img src="maxiterrorista.jpg" alt="Maxiterrorista"></div><div class="resaltado">' + mensaje + '</div>';
+        document.getElementById("mensaje").innerHTML = mensaje;
       } else if (vuelo3 && nombre.toLowerCase() === "franco morencio") {
-        var mensaje = "Franco Morencio, es buscado por incitar el racismo. Aguarde para ser abordado por las autoridades.";
+        var mensaje = "Franco Morencio, usted no se ha vacunad, pase por sanidad.";
         document.getElementById("mensaje").innerText = mensaje;
       } else if (vuelo4 && nombre.toLowerCase() === "maximiliano sanchez") {
         var mensaje = "Alerta terrorista.";
         document.getElementById("mensaje").innerHTML = '<div class="imagen-container"><img src="maxiterrorista.jpg" alt="Maxiterrorista"></div><div class="resaltado">' + mensaje + '</div>';
       } else if (vuelo5 && nombre.toLowerCase() === "alma rodriguez") {
-        var mensaje = "Celebridad: Soul Love, actriz para adultos.";
+        var mensaje = "Soul Love, actriz para adultos.";
         document.getElementById("mensaje").innerHTML = '<div class="imagen-container"><img src="almastriper.jpg" alt="almastriper"></div><div class="resaltado">' + mensaje + '</div>';
       } else {
         var mensaje = "Bienvenido " + nombre + "! Aborde su vuelo.";
